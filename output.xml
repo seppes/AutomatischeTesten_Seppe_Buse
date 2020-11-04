@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.9.0 on win32)" generated="20201103 20:32:48.384" rpa="false">
+<suite id="s1" name="Tests" source="C:\Users\seppe\Desktop\HogeSchoolJaar2\kwartaal1\testing\eindTaak_Seppe_buse\tests.robot">
+<test id="s1-t1" name="Click product, favorite and check if on favorite list">
+<kw name="Open the app without tablenumber" library="keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url_main}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20201103 20:32:48.579" level="INFO">Opening browser 'Chrome' to base url 'https://verapeeters-thomasmore.github.io/menus/#/'.</msg>
+<status status="PASS" starttime="20201103 20:32:48.579" endtime="20201103 20:32:52.692"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:32:48.579" endtime="20201103 20:32:52.692"></status>
+</kw>
+<kw name="Click first porduct" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=css-ep7jyx</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:32:52.694" endtime="20201103 20:32:52.714"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=css-ep7jyx</arg>
+</arguments>
+<msg timestamp="20201103 20:32:52.714" level="INFO">Clicking element 'class=css-ep7jyx'.</msg>
+<status status="PASS" starttime="20201103 20:32:52.714" endtime="20201103 20:32:52.849"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:32:52.693" endtime="20201103 20:32:52.849"></status>
+</kw>
+<kw name="Favorite product" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=css-qsfdvb</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:32:52.850" endtime="20201103 20:32:52.892"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=css-qsfdvb</arg>
+</arguments>
+<msg timestamp="20201103 20:32:52.892" level="INFO">Clicking element 'class=css-qsfdvb'.</msg>
+<status status="PASS" starttime="20201103 20:32:52.892" endtime="20201103 20:32:52.976"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:32:52.849" endtime="20201103 20:32:52.976"></status>
+</kw>
+<kw name="Check if product in favorite list" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=css-oc3vzn</arg>
+</arguments>
+<msg timestamp="20201103 20:32:52.976" level="INFO">Clicking element 'class=css-oc3vzn'.</msg>
+<status status="PASS" starttime="20201103 20:32:52.976" endtime="20201103 20:32:53.061"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=css-ep7jyx</arg>
+</arguments>
+<assign>
+<var>${NameCheck}</var>
+</assign>
+<msg timestamp="20201103 20:32:53.085" level="INFO">${NameCheck} = Bavik • 25CL 5.2%</msg>
+<status status="PASS" starttime="20201103 20:32:53.061" endtime="20201103 20:32:53.085"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${NameCheck}</arg>
+<arg>Bavik</arg>
+<arg>• 25CL 5.2%</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:32:53.086" endtime="20201103 20:32:53.087"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:32:52.976" endtime="20201103 20:32:53.087"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201103 20:32:53.091" endtime="20201103 20:32:55.358"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:32:48.579" endtime="20201103 20:32:55.358" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Click product, check if message pops up if not linked to table">
+<kw name="Open the app without tablenumber" library="keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url_main}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20201103 20:32:55.358" level="INFO">Opening browser 'Chrome' to base url 'https://verapeeters-thomasmore.github.io/menus/#/'.</msg>
+<status status="PASS" starttime="20201103 20:32:55.358" endtime="20201103 20:32:59.392"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:32:55.358" endtime="20201103 20:32:59.392"></status>
+</kw>
+<kw name="Click first porduct" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=css-ep7jyx</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:32:59.393" endtime="20201103 20:32:59.409"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=css-ep7jyx</arg>
+</arguments>
+<msg timestamp="20201103 20:32:59.409" level="INFO">Clicking element 'class=css-ep7jyx'.</msg>
+<status status="PASS" starttime="20201103 20:32:59.409" endtime="20201103 20:32:59.539"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:32:59.393" endtime="20201103 20:32:59.539"></status>
+</kw>
+<kw name="Press &quot;buy product&quot;" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[4]/div/div/div[7]/button[2]</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:32:59.541" endtime="20201103 20:32:59.582"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[4]/div/div/div[7]/button[2]</arg>
+</arguments>
+<msg timestamp="20201103 20:32:59.582" level="INFO">Clicking button '//*[@id="top"]/div[4]/div/div/div[7]/button[2]'.</msg>
+<status status="PASS" starttime="20201103 20:32:59.582" endtime="20201103 20:32:59.654"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:32:59.540" endtime="20201103 20:32:59.654"></status>
+</kw>
+<kw name="Check if message is correct" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=css-1501s6x</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:32:59.655" endtime="20201103 20:32:59.921"></status>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=css-1501s6x</arg>
+</arguments>
+<assign>
+<var>${Message}</var>
+</assign>
+<msg timestamp="20201103 20:32:59.940" level="INFO">${Message} = Scan QR code op je tafel om te bestellen.</msg>
+<status status="PASS" starttime="20201103 20:32:59.922" endtime="20201103 20:32:59.940"></status>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<arguments>
+<arg>${Message}</arg>
+<arg>Scan QR code op je tafel om te bestellen.</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:32:59.940" endtime="20201103 20:32:59.940"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:32:59.654" endtime="20201103 20:32:59.940"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201103 20:32:59.945" endtime="20201103 20:33:02.167"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:32:55.358" endtime="20201103 20:33:02.167" critical="yes"></status>
+</test>
+<test id="s1-t3" name="Click hamburgermenu, check if links are correct">
+<kw name="Open the app without tablenumber" library="keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url_main}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20201103 20:33:02.167" level="INFO">Opening browser 'Chrome' to base url 'https://verapeeters-thomasmore.github.io/menus/#/'.</msg>
+<status status="PASS" starttime="20201103 20:33:02.167" endtime="20201103 20:33:06.580"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:02.167" endtime="20201103 20:33:06.580"></status>
+</kw>
+<kw name="Click hamburger menu" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=css-vh5iu6</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:33:06.581" endtime="20201103 20:33:06.631"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=css-vh5iu6</arg>
+</arguments>
+<msg timestamp="20201103 20:33:06.631" level="INFO">Clicking element 'class=css-vh5iu6'.</msg>
+<status status="PASS" starttime="20201103 20:33:06.631" endtime="20201103 20:33:06.745"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:06.581" endtime="20201103 20:33:06.745"></status>
+</kw>
+<kw name="Click links in hamburger menu and check if url is correct" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[1]/div[1]/div/nav/div[1]/div/a</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:33:06.767" endtime="20201103 20:33:07.035"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[1]/div[1]/div/nav/div[1]/div/a</arg>
+</arguments>
+<msg timestamp="20201103 20:33:07.035" level="INFO">Clicking element '//*[@id="top"]/div[1]/div[1]/div/nav/div[1]/div/a'.</msg>
+<status status="PASS" starttime="20201103 20:33:07.035" endtime="20201103 20:33:07.100"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${url_hamburgermenu_bierKaart}</arg>
+</arguments>
+<msg timestamp="20201103 20:33:07.108" level="INFO">Current location is 'https://verapeeters-thomasmore.github.io/menus/#/menucard#Onze%20Bierkaart'.</msg>
+<status status="PASS" starttime="20201103 20:33:07.100" endtime="20201103 20:33:07.108"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[1]/div[1]/div/nav/div[2]/div/a</arg>
+</arguments>
+<msg timestamp="20201103 20:33:07.109" level="INFO">Clicking element '//*[@id="top"]/div[1]/div[1]/div/nav/div[2]/div/a'.</msg>
+<status status="PASS" starttime="20201103 20:33:07.108" endtime="20201103 20:33:07.194"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${url_hamburgermenu_andereDranken}</arg>
+</arguments>
+<msg timestamp="20201103 20:33:07.212" level="INFO">Current location is 'https://verapeeters-thomasmore.github.io/menus/#/menucard#Andere%20dranken'.</msg>
+<status status="PASS" starttime="20201103 20:33:07.194" endtime="20201103 20:33:07.212"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[1]/div[1]/div/nav/div[3]/div/a</arg>
+</arguments>
+<msg timestamp="20201103 20:33:07.212" level="INFO">Clicking element '//*[@id="top"]/div[1]/div[1]/div/nav/div[3]/div/a'.</msg>
+<status status="PASS" starttime="20201103 20:33:07.212" endtime="20201103 20:33:07.276"></status>
+</kw>
+<kw name="Location Should Be" library="SeleniumLibrary">
+<doc>Verifies that the current URL is exactly ``url``.</doc>
+<arguments>
+<arg>${url_hamburgermenu_lunchEnHapjes}</arg>
+</arguments>
+<msg timestamp="20201103 20:33:07.285" level="INFO">Current location is 'https://verapeeters-thomasmore.github.io/menus/#/menucard#Lunch%20en%20hapjes'.</msg>
+<status status="PASS" starttime="20201103 20:33:07.276" endtime="20201103 20:33:07.285"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:06.766" endtime="20201103 20:33:07.285"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201103 20:33:07.286" endtime="20201103 20:33:09.653"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:02.167" endtime="20201103 20:33:09.653" critical="yes"></status>
+</test>
+<test id="s1-t4" name="Open tablenumber(7) and order (undo order in back-end afterwards)">
+<kw name="Open the app with tablenumber (7)" library="keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url_test_table_7}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20201103 20:33:09.653" level="INFO">Opening browser 'Chrome' to base url 'https://verapeeters-thomasmore.github.io/menus/#/table/7'.</msg>
+<status status="PASS" starttime="20201103 20:33:09.653" endtime="20201103 20:33:13.715"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:09.653" endtime="20201103 20:33:13.715"></status>
+</kw>
+<kw name="Click &quot;menu&quot; button to go to the menucard" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[4]/div[1]/span/a</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:33:13.721" endtime="20201103 20:33:13.979"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[4]/div[1]/span/a</arg>
+</arguments>
+<msg timestamp="20201103 20:33:13.979" level="INFO">Clicking element '//*[@id="top"]/div[4]/div[1]/span/a'.</msg>
+<status status="PASS" starttime="20201103 20:33:13.979" endtime="20201103 20:33:14.143"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:13.721" endtime="20201103 20:33:14.143"></status>
+</kw>
+<kw name="Click first porduct" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=css-ep7jyx</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:33:14.159" endtime="20201103 20:33:14.233"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=css-ep7jyx</arg>
+</arguments>
+<msg timestamp="20201103 20:33:14.233" level="INFO">Clicking element 'class=css-ep7jyx'.</msg>
+<status status="PASS" starttime="20201103 20:33:14.233" endtime="20201103 20:33:14.298"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:14.159" endtime="20201103 20:33:14.298"></status>
+</kw>
+<kw name="Press &quot;buy product&quot;" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[4]/div/div/div[7]/button[2]</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:33:14.301" endtime="20201103 20:33:14.333"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[4]/div/div/div[7]/button[2]</arg>
+</arguments>
+<msg timestamp="20201103 20:33:14.333" level="INFO">Clicking button '//*[@id="top"]/div[4]/div/div/div[7]/button[2]'.</msg>
+<status status="PASS" starttime="20201103 20:33:14.333" endtime="20201103 20:33:14.420"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:14.301" endtime="20201103 20:33:14.420"></status>
+</kw>
+<kw name="Close info panel" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=css-1pasgjo</arg>
+</arguments>
+<msg timestamp="20201103 20:33:14.421" level="INFO">Clicking element 'class=css-1pasgjo'.</msg>
+<status status="PASS" starttime="20201103 20:33:14.421" endtime="20201103 20:33:14.517"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:14.420" endtime="20201103 20:33:14.517"></status>
+</kw>
+<kw name="Click &quot;shopping cart&quot; button to go to the order" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[1]/div[3]/a[2]/button</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:33:14.519" endtime="20201103 20:33:14.541"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[1]/div[3]/a[2]/button</arg>
+</arguments>
+<msg timestamp="20201103 20:33:14.541" level="INFO">Clicking element '//*[@id="top"]/div[1]/div[3]/a[2]/button'.</msg>
+<status status="PASS" starttime="20201103 20:33:14.541" endtime="20201103 20:33:14.652"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:14.519" endtime="20201103 20:33:14.652"></status>
+</kw>
+<kw name="Click order button" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=css-1l7ratw</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:33:14.652" endtime="20201103 20:33:14.675"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=css-1l7ratw</arg>
+</arguments>
+<msg timestamp="20201103 20:33:14.676" level="INFO">Clicking element 'class=css-1l7ratw'.</msg>
+<status status="PASS" starttime="20201103 20:33:14.675" endtime="20201103 20:33:14.761"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:14.652" endtime="20201103 20:33:14.762"></status>
+</kw>
+<kw name="Open the back-end" library="keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${url_back_end}</arg>
+</arguments>
+<msg timestamp="20201103 20:33:14.811" level="INFO">Opening url 'https://verapeeters-thomasmore.github.io/menubackend/'</msg>
+<status status="PASS" starttime="20201103 20:33:14.810" endtime="20201103 20:33:15.377"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:14.810" endtime="20201103 20:33:15.377"></status>
+</kw>
+<kw name="Undo order" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="root"]/div/div[2]/div[1]/button[3]</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:33:15.378" endtime="20201103 20:33:15.848"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="root"]/div/div[2]/div[1]/button[3]</arg>
+</arguments>
+<msg timestamp="20201103 20:33:15.848" level="INFO">Clicking element '//*[@id="root"]/div/div[2]/div[1]/button[3]'.</msg>
+<status status="PASS" starttime="20201103 20:33:15.848" endtime="20201103 20:33:15.932"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1s</arg>
+</arguments>
+<msg timestamp="20201103 20:33:16.942" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20201103 20:33:15.932" endtime="20201103 20:33:16.942"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:15.378" endtime="20201103 20:33:16.942"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201103 20:33:16.942" endtime="20201103 20:33:19.458"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:09.653" endtime="20201103 20:33:19.458" critical="yes"></status>
+</test>
+<test id="s1-t5" name="Open tablenumber(7) select products and delete order">
+<kw name="Open the app with tablenumber (7)" library="keywords">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${url_test_table_7}</arg>
+<arg>Chrome</arg>
+</arguments>
+<msg timestamp="20201103 20:33:19.458" level="INFO">Opening browser 'Chrome' to base url 'https://verapeeters-thomasmore.github.io/menus/#/table/7'.</msg>
+<status status="PASS" starttime="20201103 20:33:19.458" endtime="20201103 20:33:23.849"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:19.458" endtime="20201103 20:33:23.850"></status>
+</kw>
+<kw name="Click &quot;menu&quot; button to go to the menucard" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[4]/div[1]/span/a</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:33:23.851" endtime="20201103 20:33:24.347"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[4]/div[1]/span/a</arg>
+</arguments>
+<msg timestamp="20201103 20:33:24.347" level="INFO">Clicking element '//*[@id="top"]/div[4]/div[1]/span/a'.</msg>
+<status status="PASS" starttime="20201103 20:33:24.347" endtime="20201103 20:33:24.485"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:23.850" endtime="20201103 20:33:24.485"></status>
+</kw>
+<kw name="Click first porduct" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=css-ep7jyx</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:33:24.501" endtime="20201103 20:33:24.532"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=css-ep7jyx</arg>
+</arguments>
+<msg timestamp="20201103 20:33:24.532" level="INFO">Clicking element 'class=css-ep7jyx'.</msg>
+<status status="PASS" starttime="20201103 20:33:24.532" endtime="20201103 20:33:24.628"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:24.501" endtime="20201103 20:33:24.628"></status>
+</kw>
+<kw name="Press &quot;buy product&quot;" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[4]/div/div/div[7]/button[2]</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:33:24.628" endtime="20201103 20:33:24.652"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks the button identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[4]/div/div/div[7]/button[2]</arg>
+</arguments>
+<msg timestamp="20201103 20:33:24.652" level="INFO">Clicking button '//*[@id="top"]/div[4]/div/div/div[7]/button[2]'.</msg>
+<status status="PASS" starttime="20201103 20:33:24.652" endtime="20201103 20:33:24.718"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:24.628" endtime="20201103 20:33:24.718"></status>
+</kw>
+<kw name="Close info panel" library="keywords">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=css-1pasgjo</arg>
+</arguments>
+<msg timestamp="20201103 20:33:24.734" level="INFO">Clicking element 'class=css-1pasgjo'.</msg>
+<status status="PASS" starttime="20201103 20:33:24.734" endtime="20201103 20:33:24.830"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:24.734" endtime="20201103 20:33:24.830"></status>
+</kw>
+<kw name="Click &quot;shopping cart&quot; button to go to the order" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[1]/div[3]/a[2]/button</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:33:24.832" endtime="20201103 20:33:24.859"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//*[@id="top"]/div[1]/div[3]/a[2]/button</arg>
+</arguments>
+<msg timestamp="20201103 20:33:24.859" level="INFO">Clicking element '//*[@id="top"]/div[1]/div[3]/a[2]/button'.</msg>
+<status status="PASS" starttime="20201103 20:33:24.859" endtime="20201103 20:33:24.925"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:24.832" endtime="20201103 20:33:24.925"></status>
+</kw>
+<kw name="Click delete-order button" library="keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` is visible.</doc>
+<arguments>
+<arg>class=css-qsfdvb</arg>
+</arguments>
+<status status="PASS" starttime="20201103 20:33:24.926" endtime="20201103 20:33:24.950"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>class=css-qsfdvb</arg>
+</arguments>
+<msg timestamp="20201103 20:33:24.950" level="INFO">Clicking element 'class=css-qsfdvb'.</msg>
+<status status="PASS" starttime="20201103 20:33:24.950" endtime="20201103 20:33:25.002"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:24.926" endtime="20201103 20:33:25.002"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="teardown">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20201103 20:33:25.003" endtime="20201103 20:33:28.222"></status>
+</kw>
+<status status="PASS" starttime="20201103 20:33:19.458" endtime="20201103 20:33:28.222" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20201103 20:32:48.384" endtime="20201103 20:33:28.222"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0">Critical Tests</stat>
+<stat pass="5" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" id="s1" name="Tests">Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
